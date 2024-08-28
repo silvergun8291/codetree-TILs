@@ -4,7 +4,7 @@ def print_rectangle(n: int) -> None:
     for i in range(n * n):
         print(num[i % 9], end=' ')
 
-        if (i + 1) % 4 == 0:
+        if (i + 1) % n == 0:
             print()
 
 n = int(input())
