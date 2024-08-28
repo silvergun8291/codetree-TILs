@@ -1,13 +1,17 @@
 def gcd(a, b):
+    if a == b:
+        return a
+
+    x = a
+    y = b
     r = a % b
 
-    while True:
-        x = b
+    while r != 0:
+        x = y
         y = r
         r = x % y
 
-        if r == 0:
-            return y
+    return y
 
 a, b = list(map(int, input().split()))
 result = gcd(a, b)
