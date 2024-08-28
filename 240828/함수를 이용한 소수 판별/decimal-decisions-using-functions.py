@@ -16,6 +16,10 @@ def is_prime(k):
     return True
 
 
-a, b = list(map(int, input().split()))
-result = solve(a, b)
-print(result)
+num = list(map(int, input().split()))
+
+if len(num) < 2:
+    print(0)
+else:
+    result = solve(num[0], num[1])
+    print(result)
