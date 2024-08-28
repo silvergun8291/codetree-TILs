@@ -1,4 +1,7 @@
 def solve(a, b):
+    if a == b:
+        return 0
+    
     num = list(range(a, b + 1))
     prime = []
 
@@ -16,10 +19,6 @@ def is_prime(k):
     return True
 
 
-num = list(map(int, input().split()))
-
-if len(num) < 2:
-    print(0)
-else:
-    result = solve(num[0], num[1])
-    print(result)
+a, b = list(map(int, input().split()))
+result = solve(a, b)
+print(result)
